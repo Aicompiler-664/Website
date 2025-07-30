@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Erfan's Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
-    <!-- AOS for animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -15,13 +13,49 @@
         <p data-aos="fade-up" data-aos-delay="300">A Python Developer with a passion for web and AI</p>
     </header>
 
-    <section id="projects" data-aos="fade-right" data-aos-delay="600">
-        <h2>Projects</h2>
-        <p>Coming soon...</p>
+    <section id="projects">
+        <h2 data-aos="fade-up">My Projects</h2>
+        <div class="project-grid">
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Wordle Game</h3>
+                <p>A Python + Tkinter game with language support.</p>
+                <a href="https://github.com/Aicompiler-664/Woriro-Wordle.git" target="_blank">GitHub</a>
+            </div>
+        </div>
     </section>
 
+    <section id="skills">
+        <h2 data-aos="fade-up">My Skills</h2>
+        <div class="chart-grid">
+            <div class="chart-item" data-aos="flip-left" data-aos-delay="200">
+                <h2>Python</h2>
+                <canvas id="pythonChart"></canvas>
+            </div>
+            <div class="chart-item" data-aos="flip-left" data-aos-delay="400">
+                <h2>Flask</h2>
+                <canvas id="flaskChart"></canvas>
+            </div>
+            <div class="chart-item" data-aos="flip-left" data-aos-delay="600">
+                <h2>JavaScript</h2>
+                <canvas id="jsChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chart.js (v3.9.1) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <!-- Chartjs Plugin Datalabels (v2.0.0) -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Initialization Scripts -->
     <script>
-        AOS.init();
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init();
+        });
     </script>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </body>
 </html>
