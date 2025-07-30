@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Erfan's Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <!-- AOS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header>
+        <h1 data-aos="fade-down">Hello, I'm Erfan 👋</h1>
+        <p data-aos="fade-up" data-aos-delay="300">A Python Developer with a passion for web and AI</p>
+    </header>
+
+    <section id="projects" data-aos="fade-right" data-aos-delay="600">
+        <h2>Projects</h2>
+        <p>Coming soon...</p>
+    </section>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
